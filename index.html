@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Password X-Ray</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">LIVE ENTROPY SCAN</div>
+  <h1>Password X-Ray</h1>
+  <p class="tagline">Crack-time, live.</p>
+
+  <div class="scanner-panel">
+    <div class="beam" id="beam"></div>
+    <input id="pw" type="text" placeholder="type a password…" autocomplete="off" spellcheck="false" />
+    <div class="controls">
+      <button class="btn" id="demoBtn">Run Demo</button>
+    </div>
+  </div>
+
+  <div class="readout-grid">
+    <div class="gauge-wrap">
+      <svg class="gauge" viewBox="0 0 200 200">
+        <circle class="gauge-track" cx="100" cy="100" r="84"></circle>
+        <circle class="gauge-fill" id="gaugeFill" cx="100" cy="100" r="84"></circle>
+      </svg>
+      <div class="gauge-center">
+        <div class="bits" id="bitsOut">0</div>
+        <div class="bits-label">BITS</div>
+      </div>
+    </div>
+
+    <div class="side-info">
+      <div class="crack-label">CRACK TIME</div>
+      <div class="crack-value" id="crackOut">instant</div>
+
+      <div class="length-row">
+        <div class="length-dots" id="lengthDots"></div>
+      </div>
+
+      <div class="class-icons">
+        <div class="class-badge" id="badge-lower">a–z</div>
+        <div class="class-badge" id="badge-upper">A–Z</div>
+        <div class="class-badge" id="badge-digit">0–9</div>
+        <div class="class-badge" id="badge-symbol">#$%</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footnote">Illustrative charset-based estimate — not a real cracking benchmark.</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
